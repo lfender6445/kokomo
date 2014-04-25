@@ -9,5 +9,4 @@ Router.map ->
     onRun: ->
     onBeforeAction: ->
 
-  @route "authorization",
-    path: "/_oauth/google?close"
+  @route "authorization", path: "/_oauth/google?close"
