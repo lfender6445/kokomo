@@ -7,6 +7,7 @@ Router.map ->
     path: "/"
     onRun: ->
     onBeforeAction: ->
+    template: 'application'
 
   @route "authorization",
     path: "/_oauth/google?close"
