@@ -1,13 +1,13 @@
 Router.configure
   debug: true
   onBeforeAction: ->
+  layoutTemplate: 'application',
 
 Router.map ->
   @route "home",
     path: "/"
     onRun: ->
     onBeforeAction: ->
-    template: 'application'
 
   @route "authorization",
     path: "/_oauth/google?close"

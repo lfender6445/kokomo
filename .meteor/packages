@@ -10,3 +10,4 @@ coffeescript
 accounts-google
 accounts-ui
 iron-router
+jade
