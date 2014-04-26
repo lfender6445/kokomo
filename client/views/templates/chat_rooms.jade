@@ -3,9 +3,9 @@ template(name='chat_rooms')
   #building
 
     #room_1
-      if user_in_room 1
-        | {{> user}}
+      each users_in_room 1
+        img(class='avatar' src=profile.avatar title='profile_pic')
     #room_2
-      if user_in_room 2
-        | {{> user}}
+      each users_in_room 2
+        img(class='avatar' src=profile.avatar title='profile_pic')
 

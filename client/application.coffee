@@ -4,7 +4,6 @@ if Meteor.isClient
     "Welcome to kokomo."
 
   Template.hello.events "click input": ->
-    # template data, if any, is available in 'this'
     console.log "You pressed the button"  if typeof console isnt "undefined"
     return
 
@@ -12,15 +11,23 @@ if Meteor.isClient
     $('#room_1, #room_2').click (event) ->
       id = event.target.id
       room_id = id.slice(id.length-1)
-      console.log room_id
       Meteor.subscribe(
-        'user_data',
+        'all_users',
         { id: Meteor.userId(), room: room_id },
         ->
           Session.set 'current_room', room_id
       )
 
   Template.chat_rooms.helpers
-    user_in_room: (room_id) ->
-      if user = Meteor.user()
-        user.profile.room == "#{room_id}"
+    users_in_room: (room_id) ->
+      all_users_in_room = []
+      if users = Meteor.users.find().fetch({})
+        $.each users, (index, user) ->
+          console.log user
+          if user.profile.room == "#{room_id}"
+            all_users_in_room.push user
+      all_users_in_room
+
+  Template.users.helpers
+    users: ->
+      Meteor.users.find().fetch()
