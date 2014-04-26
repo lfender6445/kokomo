@@ -1,6 +1,6 @@
 template(name='user')
 
-  if currentUser
-    #profile_picture
-      img(src=profile_picture title='profile_pic')
+  #profile_picture
+    if currentUser
+      img(src=currentUser.profile.avatar title='profile_pic')
 

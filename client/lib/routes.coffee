@@ -1,7 +1,7 @@
 Router.configure
   debug: true
   onBeforeAction: ->
-  layoutTemplate: 'application',
+  layoutTemplate: 'layout',
 
 Router.map ->
   @route "home",
