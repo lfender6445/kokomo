@@ -13,4 +13,9 @@ Meteor.publish 'all_users', (opts) ->
     this.ready()
     return Meteor.users.find({})
 
+Meteor.publish "userStatus", ->
+  Meteor.users.find { "status.online": true },
+    fields:
+      status: 1,
+      username: 1
 

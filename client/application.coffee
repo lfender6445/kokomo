@@ -1,5 +1,6 @@
 if Meteor.isClient
 
+
   Template.hello.greeting = ->
     "Welcome to kokomo."
 
@@ -24,7 +25,8 @@ if Meteor.isClient
       if users = Meteor.users.find().fetch({})
         $.each users, (index, user) ->
           console.log user
-          if user.profile.room == "#{room_id}"
+          if user.profile.room == "#{room_id}" && user.status.online
+            console.log 'fuck'
             all_users_in_room.push user
       all_users_in_room
 
