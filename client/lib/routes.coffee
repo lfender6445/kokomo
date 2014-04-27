@@ -9,4 +9,5 @@ Router.map ->
     onRun: ->
     onBeforeAction: ->
 
-  @route "authorization", path: "/_oauth/google?close"
+  # TODO: Why was this needed before but not now?
+  #@route "authorization", path: "/_oauth/google?close"

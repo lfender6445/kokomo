@@ -1,7 +1,6 @@
 Messages = new Meteor.Collection('messages')
 
-Meteor.publish 'messages', ->
-  Messages.find({})
+Meteor.publish 'messages', -> Messages.find({})
 
 Accounts.onCreateUser (options, user) ->
   options.profile.avatar = user.services.google.picture
