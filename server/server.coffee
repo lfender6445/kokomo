@@ -1,3 +1,8 @@
+Messages = new Meteor.Collection('messages')
+
+Meteor.publish 'messages', ->
+  Messages.find({})
+
 Accounts.onCreateUser (options, user) ->
   options.profile.avatar = user.services.google.picture
   options.profile.email  = user.services.google.email
@@ -17,5 +22,6 @@ Meteor.publish "userStatus", ->
   Meteor.users.find { "status.online": true },
     fields:
       status: 1,
-      username: 1
+      username: 1,
+      room: 0
 

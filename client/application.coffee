@@ -1,35 +1,33 @@
 if Meteor.isClient
 
+  subscribeUsers = (room_id = 0) ->
+    Meteor.subscribe(
+      'all_users',
+      { id: Meteor.userId(), room: room_id },
+      ->
+        Session.set 'current_room', room_id
+    )
 
-  Template.hello.greeting = ->
-    "Welcome to kokomo."
-
-  Template.hello.events "click input": ->
-    console.log "You pressed the button"  if typeof console isnt "undefined"
-    return
+  Meteor.startup ->
+    subscribeUsers()
 
   Template.chat_rooms.rendered = ->
     $('#room_1, #room_2').click (event) ->
-      id = event.target.id
+      id = event.currentTarget.id
       room_id = id.slice(id.length-1)
-      Meteor.subscribe(
-        'all_users',
-        { id: Meteor.userId(), room: room_id },
-        ->
-          Session.set 'current_room', room_id
-      )
+      if room_id
+        subscribeUsers(room_id)
 
   Template.chat_rooms.helpers
     users_in_room: (room_id) ->
       all_users_in_room = []
+      # TODO: only fetch online users
       if users = Meteor.users.find().fetch({})
         $.each users, (index, user) ->
-          console.log user
-          if user.profile.room == "#{room_id}" && user.status.online
-            console.log 'fuck'
-            all_users_in_room.push user
+          if user.status
+            if user.profile.room == "#{room_id}" && user.status.online
+              all_users_in_room.push user
       all_users_in_room
 
   Template.users.helpers
-    users: ->
-      Meteor.users.find().fetch()
+    users: -> Meteor.users.find().fetch()
