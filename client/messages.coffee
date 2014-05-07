@@ -1,7 +1,7 @@
 Template.messages.messages = ->
   # TODO: last 10 messages
   if user = Meteor.user()
-    Messages.find({ room: "#{user.profile.room}" }, sort: time: 1)
+    Messages.find({ room: "#{user.profile.room}" }, { sort: { time: 1 }, limit: 50 })
 
 Template.message_input.events =
   "keydown input#message": (event) ->
