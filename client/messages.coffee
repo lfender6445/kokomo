@@ -2,7 +2,7 @@ Template.messages.messages = ->
   # TODO: last 10 messages
   Messages.find({}, sort: time: 1)
 
-Template.messages.events =
+Template.message_input.events =
   "keydown input#message": (event) ->
     if event.which is 13 # 13 is the enter key event
       if Meteor.user()
