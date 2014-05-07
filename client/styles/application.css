@@ -1,9 +1,15 @@
-/* CSS declarations go here */
-.header-avatar{
-	height: 30px;
-width: 30px;
-margin-top: 13px;
+.page {
+  padding:10px;
+}
 
+#message_box {
+  padding: 5px;
+}
+
+.header-avatar{
+  height: 30px;
+  width: 30px;
+  margin-top: 13px;
 }
 
 #building {
@@ -11,13 +17,19 @@ margin-top: 13px;
   border: black 1px solid;
 }
 
-#building #room_1, #building #room_2, #building #room_3 {
+.room {
   width:  250px;
   height: 250px;
   border: green 1px solid;
+  cursor: pointer;
+}
+.room:hover {
+  background:  #f8f8f8;
 }
 
 .avatar {
   width: 50px;
   height: 50px;
 }
+
+#building {min-height:500px;}

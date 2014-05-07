@@ -19,3 +19,4 @@ kokomo
 - Share screen
 - Voice chat
 - Allow user to go back to room 0
+- Logging out should remove avatar from room
