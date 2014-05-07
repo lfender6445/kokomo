@@ -1,6 +1,8 @@
 template(name='messages')
-  #all_messages.pre-scrollable
-    each messages
-      strong {{name}}: {{message}}
-      br
+	p Message:
+	input(type="text", id="message")
+	ul
+		each messages
+			li {{name}}: {{message}}
+
 
