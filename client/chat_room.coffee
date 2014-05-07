@@ -1,19 +1,28 @@
+class ChatRoom
+
+  online_users: ->
+    Meteor.users.find({'status.online': true}).fetch({})
+
+  room_bindings: ->
+    $('#room_1, #room_2').click (event) ->
+      debugger
+      if room =  @room_id(event.currentTarget.id)
+        subscribeUsers(room)
+
+  room_id: (elem_id) ->
+    elem_id.slice(elem_id.length-1)
+
+  view_helpers:
+    users_in_room: (room_id) ->
+      debugger
+      all_users_in_room = []
+      $.each @all_online_users, (index, user) ->
+        if user.status && user.profile.room == "#{room_id}"
+          all_users_in_room.push user
+      all_users_in_room
+
+@chat_room = new ChatRoom()
 Template.chat_rooms.rendered = ->
-  $('#room_1, #room_2').click (event) ->
-    id = event.currentTarget.id
-    room_id = id.slice(id.length-1)
-    if room_id
-      subscribeUsers(room_id)
-
-Template.chat_rooms.helpers
-  users_in_room: (room_id) ->
-    all_users_in_room = []
-    # TODO: only fetch online users
-    if users = Meteor.users.find().fetch({})
-      $.each users, (index, user) ->
-        if user.status
-          if user.profile.room == "#{room_id}" && user.status.online
-            all_users_in_room.push user
-    all_users_in_room
-
-
+   debugger
+   @chat_room.room_bindings()
+Template.chat_rooms.helpers(@chat_room.view_helpers)

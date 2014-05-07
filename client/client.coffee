@@ -1,4 +1,4 @@
 Meteor.startup ->
   Meteor.subscribe('messages')
-  #TODO: add to meteor methods
+  # TODO: add to meteor methods
   subscribeUsers()
