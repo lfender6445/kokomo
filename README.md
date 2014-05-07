@@ -9,6 +9,7 @@ kokomo
 ### LINKS 
 
 - auth setup https://console.developers.google.com/
+- iconogrpahy https://github.com/marcoceppi/bootstrap-glyphicons
 
 ### TODO
 
