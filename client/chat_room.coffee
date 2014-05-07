@@ -4,6 +4,7 @@ Template.chat_rooms.rendered = ->
     room_id = id.slice(id.length-1)
     if room_id
       subscribeUsers(room_id)
+      Meteor.subscribe('messages', room_id, -> )
 
 Template.chat_rooms.helpers
   users_in_room: (room_id) ->

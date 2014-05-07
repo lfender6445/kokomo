@@ -1,6 +1,7 @@
 Template.messages.messages = ->
   # TODO: last 10 messages
-  Messages.find({}, sort: time: 1)
+  if user = Meteor.user()
+    Messages.find({ room: "#{user.profile.room}" }, sort: time: 1)
 
 Template.message_input.events =
   "keydown input#message": (event) ->
@@ -13,6 +14,7 @@ Template.message_input.events =
       unless message.value is ""
         Messages.insert
           name: name
+          room: Meteor.user().profile.room
           message: message.value
           time: Date.now()
         document.getElementById("message").value = ""
