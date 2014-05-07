@@ -1,8 +1,5 @@
 template(name='messages')
-	p Message:
-	input(type="text", id="message")
-	ul
-		each messages
-			li {{name}}: {{message}}
-
-
+  #all_messages.pre-scrollable
+    ul
+      each messages
+        li {{name}}: {{message}}
