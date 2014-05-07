@@ -1,4 +1,10 @@
 /* CSS declarations go here */
+.header-avatar{
+	height: 30px;
+width: 30px;
+margin-top: 13px;
+
+}
 
 #building {
   width:  100%;
