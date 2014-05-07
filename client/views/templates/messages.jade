@@ -1,5 +1,6 @@
 template(name='messages')
- each messages
-   strong {{name}}: {{message}}
-   br
+  #all_messages
+    each messages
+      strong {{name}}: {{message}}
+      br
 
