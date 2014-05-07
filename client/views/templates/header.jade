@@ -1,0 +1,13 @@
+template(name='header')
+	nav(class='navbar navbar-default navbar-static-top' role='navigation')
+		div(class='container')
+			div(class="navbar-brand")
+				| Kokomo
+			ul(class="nav navbar-nav navbar-right")
+				li
+					p(lass="navbar-text")
+						if currentUser
+							img(class='header-avatar' src=currentUser.profile.avatar title='profile_pic')
+				li
+					p(class="navbar-text")
+						| {{> loginButtons}}
