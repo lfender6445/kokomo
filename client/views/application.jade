@@ -1,10 +1,14 @@
 head
 
   title kokomo
+  link(rel='stylesheet' type='text/css' href='bower_components/bootstrap/dist/css/bootstrap.min.css')
 
 body
   h1 kokomo
-  | {{> header}}
-  | {{> chat_rooms}}
+
+  | {{> profile}}
+  | {{> loginButtons}}
   | {{> video}}
+  | {{> chat_rooms}}
+  | {{> message_box}}
 

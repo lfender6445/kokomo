@@ -5,18 +5,12 @@
   border: black 1px solid;
 }
 
-#building #room_1, #building #room_2 {
-  width:400px;
-  height: 400px;
+#building #room_1, #building #room_2, #building #room_3 {
+  width:  250px;
+  height: 250px;
   border: green 1px solid;
 }
 
-#building #room_1 {
-  float:left;
-}
-#building #room_2 {
-  float:right;
-}
 .avatar {
   width: 50px;
   height: 50px;

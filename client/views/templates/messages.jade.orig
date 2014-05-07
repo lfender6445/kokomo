@@ -1,0 +1,15 @@
+template(name='messages')
+<<<<<<< HEAD
+	p Message:
+	input(type="text", id="message")
+	ul
+		each messages
+			li {{name}}: {{message}}
+
+=======
+  #all_messages.pre-scrollable
+    each messages
+      strong {{name}}: {{message}}
+      br
+>>>>>>> master
+
