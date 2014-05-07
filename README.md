@@ -9,3 +9,13 @@ kokomo
 # Links
 
 - auth setup https://console.developers.google.com/
+
+# TODO
+
+- Add anchor tag to user name in chat to open Google hangout
+- Add popup options to interact with a user's avatar
+- Add button to room to automatically invite all room members to Google hangout
+- Share camera
+- Share screen
+- Voice chat
+- Allow user to go back to room 0
