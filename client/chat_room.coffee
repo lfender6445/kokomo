@@ -4,12 +4,13 @@ class ChatRoom
     Template.chat_rooms.helpers(@view_helpers())
 
   _room_bindings: ->
-    $('#room_1, #room_2').click (event) =>
-      if room =  @_get_room_id(event.currentTarget.id)
-        subscribeUsers(room)
-
-  _get_room_id: (elem_id) ->
-    elem_id.slice(elem_id.length-1)
+    $('#room_1, #room_2, #room_3').click (event) ->
+      console.log 'room clicked'
+      id = event.currentTarget.id
+      room_id = id.slice(id.length - 1)
+      if room_id
+        subscribeUsers(room_id)
+        Meteor.subscribe('messages', room_id, -> )
 
   online_users: ->
     Meteor.users.find({'status.online': true}).fetch({})
