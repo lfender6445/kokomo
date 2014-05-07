@@ -1,5 +1,5 @@
 Template.chat_rooms.rendered = ->
-  $('#room_1, #room_2').click (event) ->
+  $('#room_1, #room_2, #room_3').click (event) ->
     id = event.currentTarget.id
     room_id = id.slice(id.length-1)
     if room_id
