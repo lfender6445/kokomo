@@ -1,0 +1,21 @@
+{
+  "name": "kokomo",
+  "version": "0.0.0",
+  "homepage": "https://github.com/lfender6445/kokomo",
+  "authors": [
+    "Melissa Holmes <meltar@gmail.com>"
+  ],
+  "description": "tbd",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower",
+    "test",
+    "tests"
+  ],
+	"dependencies": {
+		"bootstrap": "3.1.1"
+	}
+}
