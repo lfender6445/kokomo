@@ -5,7 +5,6 @@ class ChatRoom
 
   _room_bindings: ->
     $('#room_1, #room_2, #room_3').click (event) ->
-      console.log 'room clicked'
       id = event.currentTarget.id
       room_id = id.slice(id.length - 1)
       if room_id

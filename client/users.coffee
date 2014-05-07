@@ -1,5 +1,4 @@
 @subscribeUsers = (room_id = 0) ->
-  console.log room_id
   Meteor.subscribe(
     'all_users',
     { id: Meteor.userId(), room: room_id },
