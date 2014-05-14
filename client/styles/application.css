@@ -20,7 +20,7 @@
 
 .room {
   width:  250px;
-  height: 250px;
+  height: 150px;
   border: green 1px solid;
   cursor: pointer;
 }
