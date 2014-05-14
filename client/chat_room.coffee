@@ -4,7 +4,9 @@ class ChatRoom
     Template.chat_rooms.helpers(@view_helpers())
 
   _room_bindings: ->
-    $('#room_1, #room_2, #room_3').click (event) ->
+    $('#room_1, #room_2, #room_3,
+       #room_4, #room_5, #room_6,
+       #room_7, #room_8, #room_9').click (event) ->
       id = event.currentTarget.id
       room_id = id.slice(id.length - 1)
       if room_id
