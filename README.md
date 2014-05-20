@@ -16,9 +16,12 @@ kokomo
 - Add anchor tag to user name in chat to open Google hangout
 - Add popup options to interact with a user's avatar
 - Add button to room to automatically invite all room members to Google hangout
+- Provide access to existing hangout
 - Share camera
 - Share screen
 - Voice chat
 - Allow user to go back to room 0
 - Add room notifications for rooms other than room 0
 - Logging out should remove avatar from room
+- Add Google Calendar reminders with links to GTM or hangouts in calendar event
+- Try embedding Hangouts on Air.
