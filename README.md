@@ -9,6 +9,7 @@ kokomo
 # Links
 
 - auth setup https://console.developers.google.com/
+- Google hangout buttons: https://developers.google.com/+/hangouts/button
 
 # TODO - Short term
 
