@@ -6,7 +6,10 @@ head
 body
   | {{> header}}
   .page
-    #building
-      | {{> chat_rooms}}
-      | {{> message_box}}
+    .row
+      #building
+        #rooms.col-md-9
+          | {{> chat_rooms}}
+        #rooms.col-md-3
+          | {{> message_box}}
 
