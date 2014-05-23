@@ -12,6 +12,9 @@ class ChatRoom
         Meteor.subscribe('messages', room_id, -> )
 
   online_users: ->
+    #if gapi && gapi.hangout
+      # gapi.hangout.onParticipantsAdded ->
+      # console.log 'user added'
     Meteor.users.find({'status.online': true}).fetch({})
 
   view_helpers: ->

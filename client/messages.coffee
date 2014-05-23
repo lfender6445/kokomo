@@ -10,7 +10,7 @@ Template.message_box.display_messages = ->
   user = Meteor.user()
   user and user.profile.room > 0
 
-Template.hangout_button.toggle_display = ->
+Template.message_box.toggle_display = ->
   toggle = Template.message_box.display_messages()
   if toggle then '' else 'hidden'
 
