@@ -17,14 +17,9 @@ kokomo
   - start voice chat
   - video invite
 - Add button to room to automatically invite all room members to Google hangout
-
-- Google Plus
-  - join existing hangouts
-  - Ensure hangout is launched with signed in account
-  - Add anchor tag to user name in chat to open Google hangout with the user
-  - Update avatar so it is obvious they are in a hangout session
-  - Share camera
-  - Share screen
+- Provide access to existing hangout
+- Share camera
+- Share screen
 - Voice chat
   - keep it simple like sococo
   - disable listen and talk
