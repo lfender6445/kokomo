@@ -22,4 +22,4 @@ class ChatRoom
           all_users_in_room.push user
       all_users_in_room
 
-@chat_room = new ChatRoom()
+chat_room = new ChatRoom()
