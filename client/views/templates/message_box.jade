@@ -1,5 +1,6 @@
 template(name='message_box')
   #message_box.col-md-3
     | {{> hangout_button}}
-    | {{> messages}}
-    | {{> message_input}}
+    if display_messages
+      | {{> messages}}
+      | {{> message_input}}
